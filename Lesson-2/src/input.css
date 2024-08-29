@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 @layer utilities {
-	.section-min-height {
-		/* our text-3xl has 36pixels and our p-4 is 1rem so 32px. 36+32=68px */
-		min-height: calc(100vh - 68px);
-	}
+  .section-min-height {
+    /* our text-3xl has 36pixels and our p-4 is 1rem so 32px. 36+32=68px which is the height of our navbar*/
+    min-height: calc(100vh - 68px);
+  }
+
+  /* I think the before is the first line of the hamburger button icon, the normal div is the middle, the after is the third line. */
+  /* That way, when we click on the hamburger, it makes it turn into an x with the middle line going transparent */
+  /* The 720deg makes it all spin */
+  .toggle-btn {
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg];
+  }
 }
