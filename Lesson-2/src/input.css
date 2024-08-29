@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.section-min-height {
+		/* our text-3xl has 36pixels and our p-4 is 1rem so 32px. 36+32=68px */
+		min-height: calc(100vh - 68px);
+	}
+}
