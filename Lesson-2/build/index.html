@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acme Rockets</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 
@@ -20,13 +21,29 @@
             </h1>
             <div>
                 <!--Hamburger Menu Shows At Small Breakpoint-->
-                <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">&#9776;</button>
-                <nav class="hidden sm:block space-x-8 text-xl" aria-label="main">
+                <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer">
+                    &#9776;
+                </button>
+                <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
                     <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
                     <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
                     <a href="#contact" class="hover:opacity-90">Contact Us</a>
                 </nav>
             </div>
+        </section>
+        <!-- The menu that shows up for the hamburger -->
+        <section id="mobile-menu"
+            class="absolute top-0 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <button class="text-8xl self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="#hero" class="w-full text-center py-6 hover:opacity-90">Home</a>
+                <a href="#rockets" class="w-full text-center py-6 hover:opacity-90">Our Rockets</a>
+                <a href="#testimonials" class="w-full text-center py-6 hover:opacity-90">Testimonials</a>
+                <a href="#contact" class="w-full text-center py-6 hover:opacity-90">Contact Us</a>
+                <a href="#footer" class="w-full text-center py-6 hover:opacity-90">Legal</a>
+            </nav>
         </section>
     </header>
     <main class="max-w-4xl mx-auto">
